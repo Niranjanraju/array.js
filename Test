@@ -1,0 +1,23 @@
+ script.js
+
+let arrayOfIntegers = [1, 2, 3, 4];
+let targetValue = 1;
+var totalPair = []; 
+
+  for (i = 0; i < arrayOfIntegers.length; i++) {
+      var seletedArrayValue = arrayOfIntegers[i];
+      var differenceValue = ( seletedArrayValue - targetValue );  
+      
+      if ( arrayOfIntegers.indexOf(differenceValue) != -1 ) {  
+         var pair = 1;
+      } else {
+         var pair = 0; 
+      }
+      totalPair[i]=pair; 
+  }
+      
+      getSum = (total, num) => {  
+        return total + num;
+      }
+           
+      console.log("Number of pairs have a difference equal to a target value= ", totalPair.reduce(getSum))
